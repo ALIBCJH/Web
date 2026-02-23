@@ -46,45 +46,28 @@ export default function Header() {
               className="font-medium transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              About
+              About Us
             </Link>
             <Link 
               href="/ministries" 
               className="font-medium transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Ministries
+              Our Programs
             </Link>
             <Link 
-              href="/events" 
+              href="/testimonials" 
               className="font-medium transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Events
-            </Link>
-            <Link 
-              href="/sermons" 
-              className="font-medium transition-colors"
-              style={{ color: 'var(--color-text-primary)' }}
-            >
-              Sermons
+              Testimonials
             </Link>
             <Link 
               href="/contact" 
               className="font-medium transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Contact
-            </Link>
-            <Link 
-              href="/give"
-              className="px-6 py-2 rounded-lg font-medium transition-colors"
-              style={{ 
-                backgroundColor: 'var(--color-light-blue)',
-                color: 'var(--color-text-light)' 
-              }}
-            >
-              Give
+              Contact Us
             </Link>
           </div>
 
@@ -138,46 +121,28 @@ export default function Header() {
                 className="font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                About Us
               </Link>
               <Link 
                 href="/ministries" 
                 className="font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Ministries
+                Our Programs
               </Link>
               <Link 
-                href="/events" 
+                href="/testimonials" 
                 className="font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Events
-              </Link>
-              <Link 
-                href="/sermons" 
-                className="font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Sermons
+                Testimonials
               </Link>
               <Link 
                 href="/contact" 
                 className="font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
-              </Link>
-              <Link 
-                href="/give"
-                className="px-6 py-2 rounded-lg font-medium text-center"
-                style={{ 
-                  backgroundColor: 'var(--color-light-blue)',
-                  color: 'var(--color-text-light)' 
-                }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Give
+                Contact Us
               </Link>
             </div>
           </div>
