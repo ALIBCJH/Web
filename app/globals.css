@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  /* Enable dark mode with class strategy */
+  --color-*: initial;
+  --font-*: initial;
+}
+
 /* ========================================
    CHURCH WEBSITE - GLOBAL STYLES
    ======================================== */
@@ -8,43 +14,30 @@
    COLOR PALETTE
    ======================================== */
 :root {
-  /* Primary Colors */
-  --color-light-blue: #87CEEB;
-  --color-light-blue-hover: #6BB6D6;
-  --color-light-blue-light: #B0E0F6;
+  /* Requested Color Palette */
+  --color-light-blue: #ADD8E6;
+  --color-sky-blue: #87CEEB;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey-light: #F3F4F6;
+  --color-grey-dark: #374151;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F9E2AF;
   
-  /* Neutral Colors */
-  --color-grey-50: #F9FAFB;
-  --color-grey-100: #F3F4F6;
-  --color-grey-200: #E5E7EB;
-  --color-grey-300: #D1D5DB;
-  --color-grey-400: #9CA3AF;
-  --color-grey-500: #6B7280;
-  --color-grey-600: #4B5563;
-  --color-grey-700: #374151;
-  --color-grey-800: #1F2937;
-  --color-grey-900: #111827;
-  
-  /* Text Colors */
-  --color-text-primary: #000000;
-  --color-text-secondary: #4B5563;
-  --color-text-tertiary: #6B7280;
-  --color-text-light: #FFFFFF;
-  
-  /* Background Colors */
-  --color-bg-white: #FFFFFF;
-  --color-bg-light: #F9FAFB;
-  --color-bg-grey: #F3F4F6;
-  
-  /* Accent Colors */
-  --color-accent-blue: #87CEEB;
-  --color-accent-grey: #E5E7EB;
+  /* Semantic Tokens */
+  --color-primary: var(--color-light-blue);
+  --color-secondary: var(--color-sky-blue);
+  --color-accent: var(--color-gold);
+  --color-bg-base: var(--color-white);
+  --color-bg-subtle: var(--color-grey-light);
+  --color-text-base: var(--color-black);
+  --color-text-muted: var(--color-grey-dark);
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.03);
+  --shadow-gold: 0 4px 14px 0 rgba(212, 175, 55, 0.39);
 }
 
 /* ========================================
@@ -244,4 +237,32 @@ a:hover {
 
 .bg-white {
   background-color: var(--color-bg-white);
+}
+
+/* ========================================
+   Dark Theme Overrides
+   Add the class 'dark' to the <html> element to enable
+   these overrides (Header toggle adds/removes it).
+   ======================================== */
+html.dark {
+  --color-bg-white: #0b1220;
+  --color-bg-light: #071426;
+  --color-grey-50: #0b1220;
+  --color-grey-100: #0f1724;
+  --color-grey-200: #111827;
+  --color-grey-300: #1f2937;
+  --color-grey-400: #374151;
+  --color-grey-500: #4b5563;
+  --color-grey-600: #6b7280;
+  --color-grey-700: #9ca3af;
+  --color-grey-800: #d1d5db;
+  --color-grey-900: #f3f4f6;
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #9ca3af;
+
+  /* Slightly different accent for dark */
+  --color-light-blue: #6BB6D6;
+  --color-accent-blue: #6BB6D6;
 }

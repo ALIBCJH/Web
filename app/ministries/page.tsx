@@ -1,4 +1,16 @@
+import { Metadata } from "next";
 import MinistryCard from "../components/MinistryCard";
+
+export const metadata: Metadata = {
+  title: "Our Programs & Ministries",
+  description: "Discover our ministry programs including Men's Ministry, Women's Ministry, Youth Programs, Children's Ministry, and various outreach initiatives designed to grow your faith.",
+  keywords: ["church programs", "ministry activities", "youth ministry", "women's ministry", "men's ministry", "children's church"],
+  openGraph: {
+    title: "Ministry Programs - Repentance and Holiness",
+    description: "Connecting people to God through meaningful ministry programs and activities.",
+    type: "website",
+  },
+};
 
 export default function MinistriesPage() {
   return (

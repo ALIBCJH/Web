@@ -1,4 +1,16 @@
+import { Metadata } from "next";
 import EventCard from "../components/EventCard";
+
+export const metadata: Metadata = {
+  title: "Upcoming Events & Services",
+  description: "Join us for worship services, prayer meetings, special events, and conferences. Stay connected with all upcoming ministry activities and gatherings.",
+  keywords: ["church events", "worship services", "prayer meetings", "christian conferences", "ministry events", "church calendar"],
+  openGraph: {
+    title: "Events - Ministry of Repentance and Holiness",
+    description: "Join us for exciting opportunities to worship, learn, and grow together.",
+    type: "website",
+  },
+};
 
 export default function EventsPage() {
   return (

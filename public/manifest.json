@@ -1,0 +1,24 @@
+{
+  "name": "Ministry of Repentance and Holiness",
+  "short_name": "Repentance & Holiness",
+  "description": "Preparing a glorious church without spot, wrinkle, or blemish for the coming of the Messiah.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9333ea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

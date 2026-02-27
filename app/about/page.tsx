@@ -1,232 +1,113 @@
-import PastorCard from "../components/PastorCard";
+import { Metadata } from "next";
 import ValueCard from "../components/ValueCard";
+
+export const metadata: Metadata = {
+  title: "About Us - Our Divine Mandate",
+  description: "Learn about the Ministry of Repentance and Holiness, our heavenly mandate, and our mission to prepare a glorious church without spot or wrinkle for the coming of the Messiah.",
+  keywords: ["about ministry", "repentance and holiness", "church mission", "prophetic ministry", "end time preparation"],
+  openGraph: {
+    title: "About Ministry of Repentance and Holiness",
+    description: "Preparing a Glorious Church, Without Spot, Wrinkle, or Blemish.",
+    type: "website",
+  },
+};
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-white dark:bg-[#0B0F19] transition-colors duration-300">
+      {/* Hero Section: Focused on Purity */}
       <section 
-        className="text-center py-20"
-        style={{ backgroundColor: 'var(--color-light-blue)' }}
+        className="relative text-center py-32 bg-slate-900 dark:bg-[#0F172A] overflow-hidden border-b-4 border-purple-600 dark:border-[#D4AF37]"
       >
-        <div className="container mx-auto px-4">
-          <h1 style={{ color: 'var(--color-text-light)' }}>About Our Church</h1>
-          <p className="text-lg mt-4" style={{ color: 'var(--color-text-light)' }}>
-            Serving our community with faith, hope, and love since 1995
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-purple-900/20 dark:from-[#D4AF37]/10 dark:via-transparent dark:to-[#D4AF37]/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-serif italic tracking-widest text-white mb-6">
+            Repentance & Holiness
+          </h1>
+          <div className="h-1 w-24 bg-purple-600 dark:bg-[#D4AF37] mx-auto mb-6"></div>
+          <p className="text-xl md:text-2xl uppercase tracking-widest text-gray-200 max-w-3xl mx-auto">
+            Preparing a Glorious Church, Without Spot, Wrinkle, or Blemish.
           </p>
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-bg-white)' }}>
+      {/* The Mandate Section */}
+      <section className="py-24 bg-white dark:bg-[#0B0F19] transition-colors duration-300">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-center mb-8">Our Story</h2>
-            <p className="mb-4" style={{ color: 'var(--color-text-secondary)' }}>
-              Our church was founded in 1995 by a small group of believers who had a vision to create 
-              a welcoming community where people could encounter God's love and grow in their faith. 
-              What started as weekly gatherings in a living room has grown into a vibrant congregation 
-              of over 500 members.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-serif text-slate-900 dark:text-white mb-8 transition-colors duration-300">The Heavenly Mandate</h2>
+            <p className="text-xl leading-relaxed text-slate-700 dark:text-white/80 italic border-l-4 border-purple-600 dark:border-[#D4AF37] pl-6 mb-8 text-left transition-colors duration-300">
             </p>
-            <p style={{ color: 'var(--color-text-secondary)' }}>
-              Throughout the years, we've remained committed to our founding principles: biblical teaching, 
-              authentic worship, genuine fellowship, and compassionate service. We've expanded our facilities, 
-              launched numerous ministries, and seen countless lives transformed by the power of the Gospel.
+            <p className="text-lg text-slate-600 dark:text-white/70 leading-relaxed text-justify mb-6 transition-colors duration-300">
+              Our journey is not one of mere religion, but a global call to return to the path of righteousness. 
+              We stand as a voice in the wilderness, announcing the return of the Messiah and calling all nations 
+              to wash their garments in the blood of the Lamb.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-grey-100)' }}>
+      {/* Mission & Vision: High Contrast/Authority */}
+      <section className="py-20 bg-slate-50 dark:bg-[#0F172A] transition-colors duration-300">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-center mb-12">Mission & Vision</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Mission */}
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="mb-4">Our Mission</h3>
-                <p style={{ color: 'var(--color-text-secondary)' }}>
-                  To make disciples of Jesus Christ who love God, love others, and serve the world. 
-                  We are committed to helping people at every stage of their spiritual journey grow 
-                  closer to God and live out their faith in practical, meaningful ways.
-                </p>
-              </div>
-
-              {/* Vision */}
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="mb-4">Our Vision</h3>
-                <p style={{ color: 'var(--color-text-secondary)' }}>
-                  To be a thriving community of faith that transforms lives and impacts our city for 
-                  Christ. We envision a church where every person is welcomed, equipped, and empowered 
-                  to fulfill God's purpose for their lives.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 shadow-2xl rounded-xl overflow-hidden">
+            <div className="bg-slate-900 dark:bg-[#1a1a2e] p-12 text-white transition-colors duration-300">
+              <h3 className="text-2xl font-serif mb-6 text-purple-400 dark:text-[#D4AF37]">Our Mission</h3>
+              <p className="text-gray-300 dark:text-white/80 leading-loose">
+                To preach the Gospel of Repentance and the turning away from sin to prepare the way 
+                for the coming of the Lord. We focus on the absolute authority of the Bible and the 
+                manifestation of the Holy Spirit in these end times.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-[#0B0F19] p-12 text-slate-900 dark:text-white border-t md:border-t-0 md:border-l border-gray-200 dark:border-white/10 transition-colors duration-300">
+              <h3 className="text-2xl font-serif mb-6">Our Vision</h3>
+              <p className="text-slate-600 dark:text-white/70 leading-loose">
+                To see a revived generation walking in total holiness, ready for the Rapture. 
+                We envision a world where the fear of God is restored to the altar and every 
+                believer lives as a living sacrifice.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-bg-white)' }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">Our Core Values</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <ValueCard 
-              title="Worship"
-              description="We prioritize authentic, Spirit-filled worship that honors God and draws us into His presence."
-              icon="🙌"
-            />
-            <ValueCard 
-              title="Community"
-              description="We believe in the power of genuine fellowship and meaningful relationships built on love and trust."
-              icon="👥"
-            />
-            <ValueCard 
-              title="Service"
-              description="We are committed to serving others with compassion and making a tangible difference in our community."
-              icon="❤️"
-            />
-            <ValueCard 
-              title="Discipleship"
-              description="We focus on spiritual growth and maturity, helping believers become more like Christ."
-              icon="📖"
-            />
-            <ValueCard 
-              title="Outreach"
-              description="We are passionate about sharing the Gospel and reaching people locally and globally."
-              icon="🌍"
-            />
-            <ValueCard 
-              title="Prayer"
-              description="We recognize that prayer is essential to our spiritual vitality and seek God's guidance in all things."
-              icon="🙏"
-            />
+      {/* Core Values: Icons changed to more solemn symbols */}
+      <section className="py-24 bg-white dark:bg-[#0B0F19] transition-colors duration-300">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-serif mb-16 text-slate-900 dark:text-white transition-colors duration-300">The Pillars of Faith</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <ValueCard title="Absolute Holiness" description="Living a life separated from the world and dedicated to God." icon="🕊️" />
+            <ValueCard title="Deep Repentance" description="A daily turning away from sin and toward the grace of the Cross." icon="🛐" />
+            <ValueCard title="Biblical Truth" description="Uncompromising adherence to the Word of God without dilution." icon="📜" />
+            <ValueCard title="The Coming Messiah" description="Staying watchful and sober for the return of the King." icon="🎺" />
+            <ValueCard title="Divine Healing" description="Witnessing the power of God over sickness and infirmity." icon="✨" />
+            <ValueCard title="Self-Denial" description="Crucifying the flesh to allow the Spirit of God to lead." icon="✝️" />
           </div>
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-grey-100)' }}>
+      {/* Leadership Section: Titles adjusted for dignity */}
+      <section className="py-24 bg-slate-900 dark:bg-[#0F172A] text-white transition-colors duration-300">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">Our Leadership</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <PastorCard 
-              name="Rev. John Smith"
-              title="Senior Pastor"
-              bio="Pastor John has been leading our church for 15 years with a heart for worship, discipleship, and community transformation. He holds a Master of Divinity and is passionate about teaching God's Word."
-            />
-            <PastorCard 
-              name="Pastor Sarah Johnson"
-              title="Associate Pastor"
-              bio="Pastor Sarah oversees our community outreach and women's ministry programs. Her compassionate leadership has helped hundreds of families in our community."
-            />
-            <PastorCard 
-              name="Pastor Mike Davis"
-              title="Youth Pastor"
-              bio="Pastor Mike is passionate about mentoring young people and building the next generation of leaders. He brings energy, creativity, and a deep love for students."
-            />
+          <h2 className="text-center text-4xl font-serif mb-16 text-purple-400 dark:text-[#D4AF37]">The Altar Leadership</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           </div>
         </div>
       </section>
 
-      {/* What We Believe Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-bg-white)' }}>
+      {/* Final Call to Action */}
+      <section className="py-24 text-center bg-white dark:bg-[#0B0F19] border-t border-gray-100 dark:border-white/10 transition-colors duration-300">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-center mb-12">What We Believe</h2>
-            
-            <div className="space-y-6">
-              <div>
-                <h5 className="font-semibold mb-2">The Bible</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe the Bible is the inspired, infallible Word of God and the final authority 
-                  for faith and practice in the life of every believer.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="font-semibold mb-2">God</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe in one God, eternally existing in three persons: Father, Son, and Holy Spirit, 
-                  equal in power and glory.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="font-semibold mb-2">Jesus Christ</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe in the deity of Jesus Christ, His virgin birth, sinless life, substitutionary 
-                  death, bodily resurrection, and His second coming.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="font-semibold mb-2">Salvation</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe that salvation is a gift of God's grace through faith in Jesus Christ alone, 
-                  not by works, and results in eternal life.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="font-semibold mb-2">The Church</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe the Church is the body of Christ, called to worship God, make disciples, 
-                  and serve the world in Jesus' name.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="font-semibold mb-2">Eternity</h5>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  We believe in the resurrection of both the saved and the lost: the saved unto eternal 
-                  life in heaven, and the lost unto eternal separation from God.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section 
-        className="py-20 text-center"
-        style={{ backgroundColor: 'var(--color-light-blue)' }}
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="mb-6" style={{ color: 'var(--color-text-light)' }}>
-            Join Our Church Family
-          </h2>
-          <p 
-            className="text-lg mb-8 max-w-2xl mx-auto"
-            style={{ color: 'var(--color-text-light)' }}
-          >
-            We'd love to meet you! Join us this Sunday for worship.
+          <h2 className="text-4xl font-serif mb-6 text-slate-900 dark:text-white transition-colors duration-300">Prepare The Way</h2>
+          <p className="text-xl mb-12 text-slate-600 dark:text-white/70 max-w-2xl mx-auto italic transition-colors duration-300">
+            "Prepare your garments, for the time is near. The King is coming."
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a 
-              href="/contact" 
-              className="px-8 py-3 rounded-lg font-medium transition-colors"
-              style={{ 
-                backgroundColor: 'var(--color-bg-white)',
-                color: 'var(--color-text-primary)' 
-              }}
-            >
-              Contact Us
+          <div className="flex gap-6 justify-center">
+            <a href="/contact" className="px-10 py-4 bg-slate-900 dark:bg-[#C5A059] text-white dark:text-black hover:bg-black dark:hover:bg-[#D4AF37] transition-all rounded-sm uppercase tracking-widest text-sm">
+              Locate an Altar
             </a>
-            <a 
-              href="/events" 
-              className="px-8 py-3 rounded-lg font-medium transition-colors"
-              style={{ 
-                backgroundColor: 'var(--color-grey-800)',
-                color: 'var(--color-text-light)' 
-              }}
-            >
-              View Events
+            <a href="/sermons" className="px-10 py-4 border-2 border-slate-900 dark:border-[#C5A059] text-slate-900 dark:text-[#C5A059] hover:bg-slate-50 dark:hover:bg-white/5 transition-all rounded-sm uppercase tracking-widest text-sm">
+              Watch Teachings
             </a>
           </div>
         </div>
