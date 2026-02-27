@@ -23,9 +23,6 @@ const nextConfig: NextConfig = {
   
   // Strict mode for better SEO and performance
   reactStrictMode: true,
-  
-  // Optimize for production
-  swcMinify: true,
 };
 
 export default nextConfig;
