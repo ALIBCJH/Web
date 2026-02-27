@@ -1,3 +1,16 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Testimonials - Stories of Faith",
+  description: "Read inspiring testimonies and stories of faith, hope, healing, and transformation from members of Ministry of Repentance and Holiness. See how God is working in lives.",
+  keywords: ["testimonies", "faith stories", "healing testimonies", "transformation stories", "church testimonials", "miracle stories"],
+  openGraph: {
+    title: "Testimonials - Ministry of Repentance and Holiness",
+    description: "Stories of faith, hope, and transformation from our church family.",
+    type: "website",
+  },
+};
+
 export default function TestimonialsPage() {
   return (
     <div className="min-h-screen">

@@ -1,196 +1,157 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function HomePage() {
+  // JSON-LD Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Ministry of Repentance and Holiness",
+    "alternateName": "Repentance and Holiness Ministry",
+    "description": "Preparing a glorious church without spot, wrinkle, or blemish for the coming of the Messiah.",
+    "url": "https://your-domain.com",
+    "logo": "https://your-domain.com/logo.png",
+    "image": "https://your-domain.com/image.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Ministry Leader"
+    },
+    "sameAs": [
+      "https://facebook.com/your-ministry",
+      "https://youtube.com/@your-ministry",
+      "https://twitter.com/your-ministry"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KE"
+    }
+  };
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section 
-        className="relative py-32 text-center"
-        style={{ backgroundColor: 'var(--color-light-blue)' }}
-      >
-        <div className="container mx-auto px-4">
-          <h1 
-            className="mb-6"
-            style={{ 
-              color: 'var(--color-text-light)',
-              fontSize: 'var(--font-size-6xl)',
-              fontFamily: 'var(--font-heading)' 
-            }}
-          >
-            Welcome Home
-          </h1>
-          <p 
-            className="text-xl mb-8 max-w-2xl mx-auto"
-            style={{ color: 'var(--color-text-light)' }}
-          >
-            Join us in worship, fellowship, and growing together in faith
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link 
-              href="/about"
-              className="px-8 py-4 rounded-lg font-semibold transition-all"
-              style={{ 
-                backgroundColor: 'var(--color-bg-white)',
-                color: 'var(--color-text-primary)' 
-              }}
+    <>
+      {/* JSON-LD Structured Data */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      <div className="min-h-screen bg-gray-50 dark:bg-[#0B0F19] text-gray-900 dark:text-white transition-colors duration-300">
+
+      {/* ============================
+          HERO SECTION — PROPHETIC
+      ============================ */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+
+        {/* Subtle Background Light */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-purple-50 to-gray-50 dark:from-[#0B0F19] dark:via-[#0F172A] dark:to-black transition-colors duration-300" />
+
+        {/* Gold radial glow (symbolic divine light) */}
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] opacity-10 rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(212,175,55,0.4) 0%, transparent 70%)",
+          }}
+        />
+
+        <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT SIDE — MESSAGE */}
+          <div className="max-w-xl">
+
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-[10px] tracking-[0.5em] uppercase font-bold text-purple-600 dark:text-[#D4AF37]"
             >
-              Learn More
-            </Link>
-            <Link 
-              href="/events"
-              className="px-8 py-4 rounded-lg font-semibold transition-all"
-              style={{ 
-                backgroundColor: 'var(--color-grey-800)',
-                color: 'var(--color-text-light)' 
-              }}
+              Prepare the Way
+            </motion.span>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="mt-6 text-[clamp(3rem,7vw,5.5rem)] font-serif leading-[1.05] tracking-tight text-gray-900 dark:text-white"
             >
-              Upcoming Events
-            </Link>
-          </div>
-        </div>
-      </section>
+              THE MESSIAH <br />
+              <span className="text-purple-600 dark:text-[#D4AF37]">IS COMING</span>
+            </motion.h1>
 
-      {/* Welcome Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-bg-white)' }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-6">A Place to Belong</h2>
-            <p className="text-lg mb-4" style={{ color: 'var(--color-text-secondary)' }}>
-              Whether you're searching for spiritual guidance, looking for a community to call home, 
-              or seeking to deepen your relationship with God, you've come to the right place.
-            </p>
-            <p className="text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-              We're a diverse family united by our love for Christ and commitment to serving others.
-            </p>
-          </div>
-        </div>
-      </section>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="mt-8 text-lg text-gray-700 dark:text-white/70 leading-relaxed"
+            >
+              "Behold, the Bridegroom comes. Go out to meet Him."
+              <br />
+              The hour of preparation is now. Return to repentance.
+              Walk in holiness.
+            </motion.p>
 
-      {/* Service Times */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-grey-100)' }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">Join Us This Week</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
-              <div 
-                className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"
-                style={{ backgroundColor: 'var(--color-light-blue)', color: 'var(--color-text-light)' }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-10 flex gap-6 flex-wrap"
+            >
+              <Link
+                href="/sermons"
+                className="px-8 py-4 bg-purple-600 dark:bg-[#D4AF37] text-white dark:text-black font-bold uppercase tracking-widest text-[11px] hover:opacity-90 transition"
               >
-                ☀️
-              </div>
-              <h4 className="mb-2">Sunday Morning</h4>
-              <p className="text-2xl font-bold mb-2" style={{ color: 'var(--color-light-blue)' }}>9:00 AM</p>
-              <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                Traditional worship service with choir and full message
-              </p>
-            </div>
+                Hear the Message
+              </Link>
 
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
-              <div 
-                className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"
-                style={{ backgroundColor: 'var(--color-light-blue)', color: 'var(--color-text-light)' }}
+              <Link
+                href="/about"
+                className="px-8 py-4 border border-gray-400 dark:border-white/30 text-gray-700 dark:text-white uppercase tracking-widest text-[11px] hover:border-purple-600 dark:hover:border-[#D4AF37] hover:text-purple-600 dark:hover:text-[#D4AF37] transition"
               >
-                🌙
-              </div>
-              <h4 className="mb-2">Sunday Evening</h4>
-              <p className="text-2xl font-bold mb-2" style={{ color: 'var(--color-light-blue)' }}>6:00 PM</p>
-              <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                Contemporary service with praise band and community focus
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
-              <div 
-                className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"
-                style={{ backgroundColor: 'var(--color-light-blue)', color: 'var(--color-text-light)' }}
-              >
-                🙏
-              </div>
-              <h4 className="mb-2">Wednesday Prayer</h4>
-              <p className="text-2xl font-bold mb-2" style={{ color: 'var(--color-light-blue)' }}>7:00 PM</p>
-              <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                Midweek prayer meeting and Bible study
-              </p>
-            </div>
+                Our Commission
+              </Link>
+            </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* What to Expect */}
-      <section className="py-20" style={{ backgroundColor: 'var(--color-bg-white)' }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">What to Expect</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div>
-              <h4 className="mb-3">First Time Visitors</h4>
-              <p className="mb-4" style={{ color: 'var(--color-text-secondary)' }}>
-                We know visiting a new church can feel overwhelming. Our greeters will welcome you 
-                at the door and help you find your way. Come as you are - casual attire is perfectly fine!
-              </p>
-              <p style={{ color: 'var(--color-text-secondary)' }}>
-                Free coffee and refreshments are available in the lobby before and after service.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="mb-3">Kids & Youth</h4>
-              <p className="mb-4" style={{ color: 'var(--color-text-secondary)' }}>
-                We offer age-appropriate programs for children from nursery through high school. 
-                All volunteers are background-checked and trained.
-              </p>
-              <p style={{ color: 'var(--color-text-secondary)' }}>
-                Kids can check in at our Children's Ministry desk in the main lobby.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="mb-3">Worship Style</h4>
-              <p style={{ color: 'var(--color-text-secondary)' }}>
-                Our worship combines traditional hymns with contemporary praise songs. We believe 
-                in creating an atmosphere where everyone can encounter God's presence.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="mb-3">After Service</h4>
-              <p style={{ color: 'var(--color-text-secondary)' }}>
-                Stick around after the service! We'd love to meet you, answer any questions, 
-                and help you get connected with our church family.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section 
-        className="py-20 text-center"
-        style={{ backgroundColor: 'var(--color-grey-900)' }}
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="mb-6" style={{ color: 'var(--color-text-light)' }}>
-            Ready to Take the Next Step?
-          </h2>
-          <p 
-            className="text-lg mb-8 max-w-2xl mx-auto"
-            style={{ color: 'var(--color-grey-400)' }}
+          {/* RIGHT SIDE — PROPHET IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2 }}
+            className="relative h-[500px] md:h-[650px] overflow-hidden rounded-2xl"
           >
-            We'd love to hear from you. Whether you have questions or just want to say hello, 
-            we're here for you.
-          </p>
-          <Link 
-            href="/contact"
-            className="inline-block px-8 py-4 rounded-lg font-semibold transition-all"
-            style={{ 
-              backgroundColor: 'var(--color-light-blue)',
-              color: 'var(--color-text-light)' 
-            }}
-          >
-            Get In Touch
-          </Link>
+            <Image
+              src="/image.png"
+              alt="Prophet preaching the message of repentance"
+              fill
+              className="absolute inset-0 w-full h-full object-cover"
+              priority
+            />
+
+            {/* Dark overlay for seriousness */}
+            <div className="absolute inset-0 bg-black/40" />
+
+            {/* Subtle gold edge light */}
+            <div
+              className="absolute inset-0"
+              style={{
+                boxShadow: "inset 0 0 120px rgba(212,175,55,0.2)",
+              }}
+            />
+
+            {/* Caption below image */}
+            <div className="absolute left-6 bottom-6 z-20">
+              <p className="text-sm md:text-lg font-semibold text-white drop-shadow-md">mightiest prophet of the Lord</p>
+            </div>
+          </motion.div>
+
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
-
