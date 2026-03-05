@@ -40,15 +40,15 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <div className="min-h-screen bg-gray-50 dark:bg-[#0B0F19] text-gray-900 dark:text-white transition-colors duration-300">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
 
       {/* ============================
           HERO SECTION — PROPHETIC
       ============================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
 
-        {/* Subtle Background Light */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-purple-50 to-gray-50 dark:from-[#0B0F19] dark:via-[#0F172A] dark:to-black transition-colors duration-300" />
+        {/* Vibrant Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100" />
 
         {/* Gold radial glow (symbolic divine light) */}
         <div
@@ -68,7 +68,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-[10px] tracking-[0.5em] uppercase font-bold text-purple-600 dark:text-[#D4AF37]"
+              className="text-[10px] tracking-[0.5em] uppercase font-bold text-purple-600"
             >
               Prepare the Way
             </motion.span>
@@ -77,17 +77,17 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="mt-6 text-[clamp(3rem,7vw,5.5rem)] font-serif leading-[1.05] tracking-tight text-gray-900 dark:text-white"
+              className="mt-6 text-[clamp(3rem,7vw,5.5rem)] font-serif leading-[1.05] tracking-tight text-gray-900"
             >
               THE MESSIAH <br />
-              <span className="text-purple-600 dark:text-[#D4AF37]">IS COMING</span>
+              <span className="text-purple-600">IS COMING</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mt-8 text-lg text-gray-700 dark:text-white/70 leading-relaxed"
+              className="mt-8 text-lg text-gray-700 leading-relaxed"
             >
               "Behold, the Bridegroom comes. Go out to meet Him."
               <br />
@@ -103,14 +103,14 @@ export default function HomePage() {
             >
               <Link
                 href="/sermons"
-                className="px-8 py-4 bg-purple-600 dark:bg-[#D4AF37] text-white dark:text-black font-bold uppercase tracking-widest text-[11px] hover:opacity-90 transition"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold uppercase tracking-widest text-[11px] hover:shadow-xl hover:scale-105 transition-all rounded-xl"
               >
                 Hear the Message
               </Link>
 
               <Link
                 href="/about"
-                className="px-8 py-4 border border-gray-400 dark:border-white/30 text-gray-700 dark:text-white uppercase tracking-widest text-[11px] hover:border-purple-600 dark:hover:border-[#D4AF37] hover:text-purple-600 dark:hover:text-[#D4AF37] transition"
+                className="px-8 py-4 border-2 border-purple-600 text-purple-600 uppercase tracking-widest text-[11px] hover:bg-purple-600 hover:text-white transition-all rounded-xl"
               >
                 Our Commission
               </Link>

@@ -14,23 +14,23 @@ export const metadata: Metadata = {
 
 export default function SermonsPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0B0F19] transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       {/* Hero Section */}
       <section 
-        className="text-center py-20 bg-purple-100 dark:bg-[#0F172A] transition-colors duration-300"
+        className="text-center py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600"
       >
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Sermon Archive</h1>
-          <p className="text-lg mt-4 text-slate-700 dark:text-white/80 transition-colors duration-300">
+          <h1 className="text-5xl font-bold text-white mb-4">Sermon Archive</h1>
+          <p className="text-lg mt-4 text-white/90">
             Listen to past messages and grow in your understanding of God's Word and how it applies to your life.
           </p>
         </div>
       </section>
 
       {/* Recent Sermons */}
-      <section className="py-20 bg-white dark:bg-[#0B0F19] transition-colors duration-300">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12 text-4xl font-serif text-slate-900 dark:text-white transition-colors duration-300">Recent Sermons</h2>
+          <h2 className="text-center mb-12 text-4xl font-serif text-slate-900">Recent Sermons</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <SermonCard 
@@ -80,28 +80,28 @@ export default function SermonsPage() {
       </section>
 
       {/* Sermon Series */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0F172A] transition-colors duration-300">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12 text-4xl font-serif text-slate-900 dark:text-white transition-colors duration-300">Current Series</h2>
+          <h2 className="text-center mb-12 text-4xl font-serif text-slate-900">Current Series</h2>
           
-          <div className="max-w-4xl mx-auto bg-white dark:bg-[#1a1a2e] rounded-lg shadow-lg overflow-hidden transition-colors duration-300">
+          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden border-2 border-purple-100">
             <div 
-              className="h-64 flex items-center justify-center bg-purple-200 dark:bg-[#0F172A] transition-colors duration-300"
+              className="h-64 flex items-center justify-center bg-gradient-to-br from-purple-400 to-blue-400"
             >
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300">Living with Purpose</h3>
-                <p className="text-xl mt-2 text-slate-700 dark:text-white/80 transition-colors duration-300">
+                <h3 className="text-3xl font-bold text-white mb-2">Living with Purpose</h3>
+                <p className="text-xl mt-2 text-white/90">
                   A 6-week journey through Ephesians
                 </p>
               </div>
             </div>
             <div className="p-8">
-              <p className="mb-4 text-slate-600 dark:text-white/70 transition-colors duration-300">
+              <p className="mb-4 text-slate-600">
                 Join us as we explore Paul's letter to the Ephesians and discover God's incredible 
                 purpose for your life. Each week we'll uncover practical truths about our identity 
                 in Christ, our calling to unity, and our mission to impact the world.
               </p>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors duration-300">
+              <p className="font-semibold text-slate-900">
                 Sundays at 9:00 AM & 6:00 PM
               </p>
             </div>
@@ -111,26 +111,26 @@ export default function SermonsPage() {
 
       {/* Subscribe CTA */}
       <section 
-        className="py-20 text-center bg-slate-900 dark:bg-[#0F172A] transition-colors duration-300"
+        className="py-20 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"
       >
         <div className="container mx-auto px-4">
           <h2 className="mb-6 text-4xl font-bold text-white">
             Never Miss a Message
           </h2>
           <p 
-            className="text-lg mb-8 max-w-2xl mx-auto text-gray-300 dark:text-white/70 transition-colors duration-300"
+            className="text-lg mb-8 max-w-2xl mx-auto text-white/90"
           >
             Subscribe to our podcast or YouTube channel to get notified when new sermons 
             are available.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <button
-              className="px-8 py-4 rounded-lg font-semibold transition-all bg-purple-600 dark:bg-[#C5A059] text-white dark:text-black hover:bg-purple-700 dark:hover:bg-[#D4AF37]"
+              className="px-8 py-4 rounded-xl font-bold transition-all bg-white text-purple-600 hover:shadow-xl hover:scale-105"
             >
               Subscribe to Podcast
             </button>
             <button
-              className="px-8 py-4 rounded-lg font-semibold transition-all bg-gray-700 dark:bg-white/10 text-white hover:bg-gray-600 dark:hover:bg-white/20"
+              className="px-8 py-4 rounded-xl font-bold transition-all bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white/30"
             >
               Watch on YouTube
             </button>

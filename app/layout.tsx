@@ -118,7 +118,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} ${dancing.variable} font-sans antialiased bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-white transition-colors duration-300`}
+        className={`${inter.variable} ${playfair.variable} ${dancing.variable} font-sans antialiased bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 text-slate-900`}
         suppressHydrationWarning
       >
         <ThemeProvider>
